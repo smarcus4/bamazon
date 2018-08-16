@@ -265,13 +265,17 @@ function newProductPrompt(){
         connection.query(queryString4, productRes, function(err, res, fields){
             if(err) throw err;
             console.log('New product has been added to the inventory under Item ID ' + res.insertId + '.');
-			console.log("\n---------------------------------------------------------------------\n");
+            console.log("\n---------------------------------------------------------------------\n");
+            
+
+
+            promptManager();
         })
         
+       
 
     
     })
-    promptManager();
 
 
 
